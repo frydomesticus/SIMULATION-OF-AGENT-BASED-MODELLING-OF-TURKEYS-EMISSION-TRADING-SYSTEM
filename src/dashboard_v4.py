@@ -1,5 +1,5 @@
 """
-TR-ZERO: Ulusal İklim Karar Destek Sistemi Dashboard (v4.0 - Sunum Versiyonu)
+TR-ZERO: Ulusal İklim Karar Destek Sistemi Dashboard 
 ==============================================================================
 
 Premium, sunum odaklı, animasyonlu ve interaktif dashboard.
@@ -18,7 +18,7 @@ Yazar: İbrahim Hakkı Keleş, Oğuz Gökdemir, Melis Mağden
 Ders: Endüstri Mühendisliği Bitirme Tezi
 Danışman: Deniz Efendioğlu
 Tarih: Aralık 2025
-Versiyon: 4.0 (Sunum Versiyonu)
+Versiyon: 4.0 
 """
 
 import streamlit as st

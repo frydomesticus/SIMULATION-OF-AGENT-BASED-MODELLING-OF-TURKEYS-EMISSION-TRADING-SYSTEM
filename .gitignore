@@ -1,0 +1,33 @@
+# Python sanal ortam
+.venv/
+venv/
+env/
+
+# Agent/AI klasörleri
+.agent/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Veritabanı dosyaları (isteğe bağlı - paylaşmak istiyorsanız kaldırın)
+*.sqlite
+*.db
+
+# IDE ayarları
+.vscode/
+.idea/
+
+# Geçici dosyalar
+*.tmp
+*.temp
+*.log
+
+# OS dosyaları
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints/

@@ -1,0 +1,26 @@
+# 🌱 TR-ZERO: Ulusal İklim Karar Destek Sistemi
+
+[![Python](https://img. shields.io/badge/Python-3.12-blue.svg)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28-red.svg)](https://streamlit.io)
+[![Mesa](https://img. shields.io/badge/Mesa-3.3. 1-green.svg)](https://mesa.readthedocs.io)
+
+## 📖 Proje Hakkında
+
+TR-ZERO, Türkiye'nin sera gazı emisyonlarını analiz etmek, gelecek projeksiyonları 
+oluşturmak ve farklı politika senaryolarını değerlendirmek için geliştirilmiş 
+kapsamlı bir karar destek sistemidir.
+
+### 🎯 Temel Özellikler
+
+- **📊 Ulusal Envanter Analizi:** 1990-2025 yılları arası sektörel emisyon verileri
+- **🤖 Yapay Zeka Projeksiyonu:** Polinom regresyon tabanlı trend tahmini
+- **🏭 Ajan Tabanlı Modelleme:** ETS piyasa simülasyonu
+- **🗺️ Bölgesel Analiz:** İl bazlı emisyon dağılımı
+- **📈 Senaryo Karşılaştırması:** BAU, NDC, ETS senaryoları
+
+## 🚀 Kurulum
+
+### Gereksinimler
+
+```bash
+pip install pandas numpy matplotlib scikit-learn mesa streamlit plotly

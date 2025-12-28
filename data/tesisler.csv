@@ -1,0 +1,80 @@
+# =============================================================================
+# TR-ZERO: Türkiye Termik Santral Listesi Veri Seti
+# =============================================================================
+#
+# Bu veri seti, Türkiye'deki ETS kapsamına girecek büyük termik santrallerin
+# detaylı bilgilerini içerir.
+#
+# Kaynak Referansları:
+# --------------------
+# [1] TEİAŞ (2024). Türkiye Elektrik Enerjisi 10 Yıllık Üretim Kapasite 
+#     Projeksiyonu (2024-2033).
+#     https://www.teias.gov.tr/
+#
+# [2] EPDK (2024). Elektrik Piyasası Sektör Raporu 2023.
+#     https://www.epdk.gov.tr/
+#
+# [3] Enerji Atlası (2024). Türkiye Termik Santralleri.
+#     https://www.enerjiatlasi.com/termik/
+#     NOT: Santral bazlı detay bilgiler bu kaynaktan teyit edilmiştir.
+#
+# [4] GlobalData (2024). Turkey Power Market Analysis.
+#     https://www.globaldata.com/
+#
+# [5] EU ETS Directive 2003/87/EC - Tesis kapsam kriterleri
+#     20 MW termal girdi üzerindeki tesisler kapsama dahil
+#
+# Metodoloji:
+# -----------
+# - Yıllık emisyon hesabı: Kapasite × KF × 8760 × EF
+#   - KF: Kapasite faktörü (yakıt tipine göre 0.35-0.85)
+#   - EF: Emisyon faktörü (IPCC 2006, Table 2.2)
+# - ETS kapsamı: >20 MW termal girdi veya yıllık >25.000 tCO₂
+#
+# Birimler:
+# - Kapasite_MW: Kurulu güç (Megawatt elektrik)
+# - Emisyon_tCO2: Yıllık tahmini emisyon (ton CO₂)
+# - Emisyon_Faktoru: tCO₂/MWh üretim
+#
+# =============================================================================
+Tesis_ID,Tesis_Adi,Sirket,Il,Bolge,Yakit_Tipi,Kapasite_MW,Kapasite_Faktor,Emisyon_Faktoru_tCO2_MWh,Yillik_Emisyon_tCO2,ETS_Kapsami,Kaynak
+T001,Afsin-Elbistan A,EÜAŞ,Kahramanmaras,Akdeniz,Linyit,1355,0.75,1.10,9800000,Evet,TEİAŞ_2024
+T002,Afsin-Elbistan B,EÜAŞ,Kahramanmaras,Akdeniz,Linyit,1440,0.75,1.10,10400000,Evet,TEİAŞ_2024
+T003,Soma B,Soma Elektrik,Manisa,Ege,Linyit,990,0.70,1.05,6400000,Evet,Enerji_Atlasi
+T004,Soma Kolin,Kolin İnşaat,Manisa,Ege,Linyit,510,0.72,1.05,3400000,Evet,Enerji_Atlasi
+T005,Zonguldak Eren (ZETES),Eren Enerji,Zonguldak,Karadeniz,Ithal_Komur,2790,0.82,0.85,17100000,Evet,GlobalData
+T006,İskenderun ISKEN,Oyak,Hatay,Akdeniz,Ithal_Komur,1320,0.80,0.85,7900000,Evet,TEİAŞ_2024
+T007,Hunutlu (Emba),EMBA Hunutlu,Adana,Akdeniz,Ithal_Komur,1320,0.75,0.85,7400000,Evet,TEİAŞ_2024
+T008,Cenal Karabiga,İçdaş,Canakkale,Marmara,Ithal_Komur,1320,0.78,0.85,7700000,Evet,TEİAŞ_2024
+T009,Kemerköy,Limak-IC İçtaş,Mugla,Ege,Linyit,699,0.65,1.05,4200000,Evet,Limak
+T010,Yeniköy,Limak-IC İçtaş,Mugla,Ege,Linyit,420,0.60,1.05,2300000,Evet,Limak
+T011,Seyitömer,EÜAŞ,Kutahya,Ege,Linyit,600,0.55,1.05,3100000,Evet,EÜAŞ
+T012,Tunçbilek,EÜAŞ,Kutahya,Ege,Linyit,365,0.50,1.05,1700000,Evet,EÜAŞ
+T013,Çayırhan,EÜAŞ,Ankara,IcAnadolu,Linyit,620,0.60,1.00,3300000,Evet,EÜAŞ
+T014,Orhaneli,EÜAŞ,Bursa,Marmara,Linyit,210,0.55,1.00,1000000,Evet,EÜAŞ
+T015,Yunus Emre,Oyak,Eskisehir,IcAnadolu,Linyit,290,0.65,1.00,1700000,Evet,Enerji_Atlasi
+T016,Kangal,Konya Şeker,Sivas,IcAnadolu,Linyit,457,0.55,1.00,2200000,Evet,EÜAŞ
+T017,Çan 1-2,Çan Kömür,Canakkale,Marmara,Linyit,320,0.60,1.00,1700000,Evet,Enerji_Atlasi
+T018,Çatalağzı,EÜAŞ,Zonguldak,Karadeniz,Taskomur,300,0.50,0.95,1300000,Evet,EÜAŞ
+T019,Gebze DGKÇ,Enerjisa,Kocaeli,Marmara,Dogalgaz,1542,0.55,0.40,3000000,Evet,GlobalData
+T020,Ambarlı,Enerjisa,Istanbul,Marmara,Dogalgaz,1350,0.50,0.40,2400000,Evet,EPDK_2024
+T021,Adapazarı Enerji,Enerjisa,Sakarya,Marmara,Dogalgaz,804,0.55,0.40,1600000,Evet,EPDK_2024
+T022,Aliağa İzmir,Enerjisa,Izmir,Ege,Dogalgaz,1400,0.55,0.40,2700000,Evet,EPDK_2024
+T023,Esenyurt Enerji,Aksa,Istanbul,Marmara,Dogalgaz,180,0.60,0.40,400000,Evet,EPDK_2024
+T024,Bursa Doğalgaz,Naturelgaz,Bursa,Marmara,Dogalgaz,1440,0.45,0.40,2300000,Evet,EPDK_2024
+T025,Denizli Kızıldere,Zorlu Enerji,Denizli,Ege,Jeotermal,165,0.90,0.12,160000,Hayir,Enerji_Atlasi
+T026,Aydın Germencik,Güriş,Aydin,Ege,Jeotermal,210,0.88,0.12,200000,Hayir,Enerji_Atlasi
+T027,Manisa Alaşehir,Maspo,Manisa,Ege,Jeotermal,98,0.85,0.12,90000,Hayir,Enerji_Atlasi
+T028,Tufanbeyli,Enerjisa,Adana,Akdeniz,Linyit,450,0.65,1.05,2700000,Evet,EPDK_2024
+T029,Silopi,Cengiz,Sirnak,Guneydogu,Asfaltit,405,0.70,1.15,2900000,Evet,EPDK_2024
+T030,Bolu Göynük,EÜAŞ,Bolu,Karadeniz,Linyit,135,0.60,1.00,710000,Evet,EÜAŞ
+T031,İçdaş Biga,İçdaş,Canakkale,Marmara,Ithal_Komur,600,0.80,0.85,3600000,Evet,EPDK_2024
+T032,Sugözü,Sugözü Enerji,Adana,Akdeniz,Linyit,405,0.55,1.00,2000000,Evet,Enerji_Atlasi
+T033,Hamitabat,Enerjisa,Kirklareli,Marmara,Dogalgaz,1200,0.50,0.40,2100000,Evet,EPDK_2024
+T034,Unimar Bandırma,Unimar,Balikesir,Marmara,Dogalgaz,890,0.55,0.40,1700000,Evet,EPDK_2024
+T035,Esenboğa Enerji,Gama,Ankara,IcAnadolu,Dogalgaz,520,0.60,0.40,1100000,Evet,EPDK_2024
+T036,Erzin Doğalgaz,Ronesans,Hatay,Akdeniz,Dogalgaz,904,0.50,0.40,1600000,Evet,EPDK_2024
+T037,İskenderun Demir Çelik,İsdemir,Hatay,Akdeniz,BOF_Gaz,200,0.85,1.85,2800000,Evet,NIR_2024
+T038,Erdemir Ereğli,Erdemir,Zonguldak,Karadeniz,BOF_Gaz,180,0.85,1.85,2500000,Evet,NIR_2024
+T039,Çimento Santralleri,Çeşitli,Bolu,Karadeniz,Petkok,150,0.75,0.95,940000,Evet,NIR_2024
+T040,Kardemir Karabük,Kardemir,Karabuk,Karadeniz,BOF_Gaz,120,0.80,1.85,1600000,Evet,NIR_2024
